@@ -4,7 +4,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -24,3 +25,18 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Editor directories and files
+.project
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# node module && other build dir
+node_modules/
+unpackage/
+dist/

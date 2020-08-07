@@ -1,0 +1,41 @@
+/**
+* 底部表单按钮行的样式，一般默认的表单底部的按钮
+*/
+
+/*定义底部的高度*/
+$btn-wrap-height: 120upx;
+$btn-item-width: 338upx;
+$btn-item-height: 87upx;
+
+
+.af-form-btn-wrap {
+    background: #FFFFFF;
+    height: $btn-wrap-height;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 99;
+    padding: 0 25upx;
+}
+
+.af-form-btn-item {
+    background: #FFFFFF;
+    border: 2upx solid #0076FE;
+    border-radius: 20upx;
+    font-size: 32upx;
+    color: #0076FE;
+    width: $btn-item-width;
+    height: $btn-item-height;
+    justify-content: center;
+
+    &:active {
+        opacity: 0.8;
+    }
+
+    &.active {
+        background: transparent;
+        background-image: linear-gradient(-134deg, #3F8BFB 0%, #0076FE 100%);
+        color: #FFFFFF;
+    }
+}

@@ -1,0 +1,163 @@
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    display: none;
+    border: none;
+}
+
+page {
+    font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 24upx;
+    color: #333333;
+    background-color: #fff;
+    height: 100%;
+}
+
+.af-box {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* 页面容器 */
+.af-page-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* 滚动列表基本样式 */
+.af-scroll-list,
+.af-scroll-list-x {
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+.af-scroll-list-inner {
+    width: 100%;
+    position: relative;
+}
+
+.af-scroll-list-x {
+    width: 100%;
+}
+
+/*===== 通过伪类 + .vertical-middle 实现行内元素垂直居中 START=====*/
+/* 内部垂直居中 */
+/* 子元素垂直居中写法  */
+.af-v-mid {
+    text-align: center;
+}
+
+.af-p-v-mid::after,
+.af-v-mid::after {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+    content: "";
+}
+
+.af-v-mid text,
+.af-c-v-mid {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*===== 通过伪类 + .vertical-middle 实现行内元素垂直居中 END=====*/
+
+/* ============== 默认按钮 START============== */
+button {
+    background-color: transparent;
+    box-shadow: transparent;
+    outline: none;
+    border: none;
+    list-style-type: none;
+}
+
+.af-btn-default {
+    background-image: linear-gradient(-134deg, #3F8BFB 0%, #0076FE 100%);
+    border-radius: 20upx;
+    box-shadow: 0 6upx 20upx 0 rgba(53, 153, 215, 0.35);
+    font-size: 32upx;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    width: 600upx;
+    height: 96upx;
+    justify-content: center;
+}
+
+.af-btn-default:active,
+.af-btn-default-hover {
+    // background-image: linear-gradient(-156deg, #4190D6 0%, #348BD9 100%);
+    opacity: 0.9;
+}
+
+.af-btn-disabled {
+    background-image: none;
+    opacity: 1;
+    box-shadow: 0 6upx 20upx 0 rgba(183, 183, 183, 0.35);
+    background: #b7b7b7 !important;
+}
+
+/* ============== 默认按钮 END============== */
+
+/* ====== 默认input placeholder ====== */
+.af-txt-placeholder {
+    color: #898989 !important;
+}
+
+// swiper item
+.af-swiper-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    overflow: hidden;
+    flex: 1;
+}
+
+.af-swiper-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* 文案过长，易换行的 */
+.af-txt-long {
+    padding-left: 50upx;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.af-tel-phone {
+    font-size: 28upx;
+    color: #3A95E8 !important;
+    line-height: 28upx;
+    text-decoration: underline;
+}
+
+/* ======= 空模版 ======*/
+.af-empty-wrap {
+    flex: 1;
+    height: 100% !important;
+    height: 100vh;
+    position: relative;
+}
+
+@import "./base.scss";
+@import "./animation.scss";
+@import "./flex.scss";
+@import "./btn.row.scss";

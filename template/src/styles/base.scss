@@ -1,0 +1,116 @@
+$padding: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+
+@for $i from 1 through length($padding) {
+    $item: nth($padding, $i);
+
+    .af-pt-#{$item} {
+        padding-top: #{$item}upx;
+    }
+
+    .af-pb-#{$item} {
+        padding-bottom: #{$item}upx;
+    }
+
+    .af-pl-#{$item} {
+        padding-left: #{$item}upx;
+    }
+
+    .pr-#{$item} {
+        padding-right: #{$item}upx;
+    }
+
+    .af-pall-#{$item} {
+        padding: #{$item}upx;
+    }
+
+    .af-mt-#{$item} {
+        margin-top: #{$item}upx;
+    }
+
+    .af-mb-#{$item} {
+        margin-bottom: #{$item}upx;
+    }
+
+    .af-ml-#{$item} {
+        margin-left: #{$item}upx;
+    }
+
+    .af-mr-#{$item} {
+        margin-right: #{$item}upx;
+    }
+
+    .af-mall-#{$item} {
+        margin: #{$item}upx;
+    }
+
+}
+
+// 对齐方式
+.ta-right {
+    text-align: right;
+}
+
+.ta-center {
+    text-align: center;
+}
+
+.ta-left {
+    text-align: left;
+}
+
+//宽高显示--100%
+.af-w-100 {
+    width: 100%;
+    position: relative;
+    // box-sizing: border-box;
+}
+
+.af-h-100 {
+    height: 100%;
+    position: relative;
+    // box-sizing: border-box;
+}
+
+/*文本颜色*/
+.af-txt-succ {
+    color: #6CC00F !important;
+}
+
+.af-txt-err {
+    color: #FE5578 !important;
+}
+
+/* ========= 文本溢出省略 START=======*/
+/* 单行超出省略文本 */
+.af-txt-overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.af-txt-overflow-l2,
+.af-txt-overflow-l3,
+.af-txt-overflow-l4 {
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+/* 2行省略 */
+.af-txt-overflow-l2 {
+    -webkit-line-clamp: 2;
+}
+
+/* 3行省略 */
+.af-txt-overflow-l3 {
+    -webkit-line-clamp: 3;
+}
+
+/* 4行省略 */
+.af-txt-overflow-l4 {
+    -webkit-line-clamp: 4;
+}
+/* ========= 文本溢出省略 END=======*/

@@ -1,0 +1,65 @@
+{
+	"pages": [
+		{
+			"path": "pages/home/index",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"disableScroll": false,
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/mine/index",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"disableScroll": false,
+				"enablePullDownRefresh": true
+			}
+		}
+	],
+	//配置分包模式
+	"subPackages": [],
+	//模式配置，仅开发期间生效
+	"condition": {
+		"current": 1, //当前激活的模式（list 的索引项）
+		"list": []
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "afire-template",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationStyle": "custom",
+		"backgroundColor": "#f8f8f8",
+		"usingComponents": {
+			/*自定义tabbar 组件*/
+			// "custom-tab-bar": "/cutom-tab-bar/index"
+		},
+		"pageOrientation": "portrait" //横屏配置，全局屏幕旋转设置(仅 APP/微信/QQ小程序)，支持 auto / portrait / landscape
+	},
+	"easycom": {
+		"autoscan": true, //是否自动扫描组件
+		"custom": { //自定义扫描规则
+			"uni-(.*)": "~@/components/uni-$1.vue"
+		}
+	},
+	"tabBar": {
+		"color": "#9AA1B3",
+		"selectedColor": "#0076FE",
+		"borderStyle": "white",
+		"backgroundColor": "#f8f8f8",
+		"list": [
+			{
+				"pagePath": "pages/home/index",
+				"iconPath": "static/tabbar/tabbar-icon-index-default.png",
+				"selectedIconPath": "static/tabbar/tabbar-icon-index-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/mine/index",
+				"iconPath": "static/tabbar/tabbar-icon-mine-default.png",
+				"selectedIconPath": "static/tabbar/tabbar-icon-mine-active.png",
+				"text": "我的"
+			}
+		]
+	}
+}

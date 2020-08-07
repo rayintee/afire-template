@@ -1,0 +1,66 @@
+// ======= flex布局通用模块 =======
+.af-flex-row,
+.af-flex-col {
+    display: flexbox;
+    display: -webkit-box;
+    display: flex;
+    display: -webkit-flex;
+    box-align: center;
+    align-items: center;
+    box-pack: justify;
+    justify-content: space-between;
+}
+
+.af-flex-col {
+    box-orient: vertical;
+    flex-direction: column;
+    box-align: flex-start;
+    align-items: flex-start;
+}
+
+.af-flex-1 {
+    flex: 1;
+}
+
+/*对齐方式*/
+/*行模式*/
+.af-flex-row.af-x-end {
+    justify-content: flex-end;
+}
+
+.af-flex-row.af-x-center {
+    justify-content: center;
+}
+
+.af-flex-row.af-x-start {
+    justify-content: flex-start;
+}
+
+.af-flex-row.af-y-start {
+    align-items: flex-start;
+}
+
+.af-flex-row.af-y-end {
+    align-items: flex-end;
+}
+
+/*列模式*/
+.af-flex-col.af-x-start {
+    align-items: flex-start;
+}
+
+.af-flex-col.af-x-end {
+    align-items: flex-end;
+}
+
+.af-flex-col.af-y-start {
+    justify-content: flex-start;
+}
+
+.af-flex-col.af-y-end {
+    justify-content: flex-end;
+}
+
+.af-flex-col.af-y-center {
+    justify-content: center;
+}
