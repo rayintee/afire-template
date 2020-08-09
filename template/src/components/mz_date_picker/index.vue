@@ -1,7 +1,7 @@
 <!--
  * @Author: tim
  * @Date: 2020-07-28 20:17:30
- * @LastEditTime: 2020-08-09 09:20:30
+ * @LastEditTime: 2020-08-09 12:05:02
  * @LastEditors: Please set LastEditors
  * @Description: 日期选择器
  * @FilePath: /mzi-water-oos/src/components/mz_date_picker/index.vue
@@ -17,7 +17,7 @@
             <view class="_picker-date-body">
                 <view class="_picker-date-month">
                     <text class="_picker-arrow arrow-right" data-handler="pre" @tap="onDateChange"></text>
-                    <view class="_picker-picked-month-txt" v-if="year">{{year + '年 ' + month + '月'}}</view>
+                    <view class="_picker-picked-month-txt">{{getHMonthInfo}}</view>
                     <text class="_picker-arrow arrow-left" data-handler="next" @tap="onDateChange"></text>
                 </view>
                 <view class="_picker-date-calendar">
@@ -193,18 +193,12 @@
             this.date = `${year}-${month}`;
         },
 
-        // computed: {
-        //     ///动态计算
-        //     getClass(e) {
-        //         console.log(e);
-        //         let clss = '';
-        //         // clss += x.month != this.month ? ' notCurrent' : '';
-        //         // clss += x.date == this.today ? ' today' : '';
-        //         // clss += x.date == this.beSelectDate ? ' choice' : ''
-        //         return clss
-        //     }
-
-        // },
+        computed: {
+            ///动态计算
+            getHMonthInfo() {
+                return this.year + '年 ' + this.month + '月'
+            }
+        },
 
         methods: {
             /**
