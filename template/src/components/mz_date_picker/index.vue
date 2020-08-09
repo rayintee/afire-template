@@ -1,7 +1,7 @@
 <!--
  * @Author: tim
  * @Date: 2020-07-28 20:17:30
- * @LastEditTime: 2020-08-09 16:19:56
+ * @LastEditTime: 2020-08-09 18:29:25
  * @LastEditors: Please set LastEditors
  * @Description: 日期选择器
  * @FilePath: /mzi-water-oos/src/components/mz_date_picker/index.vue
@@ -34,7 +34,7 @@
                                     :data-month="x.month" :data-day="x.day" :data-date="x.date" @tap="onDayTap">
                                     <view class="date-grid-child choid-grid-child fc "
                                         :class="x.date >= today ? '':  !isFuture ? '' : 'notCurrent'">
-                                        {{convertStr(x)}}</view>
+                                        {{convertStr}}</view>
                                 </view>
                             </swiper-item>
                             <swiper-item class="_picker-date-grid">
@@ -44,7 +44,7 @@
                                     :data-month="x.month" :data-day="x.day" :data-date="x.date" @tap="onDayTap">
                                     <view class="date-grid-child choid-grid-child fc "
                                         :class="x.date >= today ? '':  !isFuture ? '' : 'notCurrent'">
-                                        {{convertStr(x)}}</view>
+                                        {{convertStr}}</view>
                                     <!-- x.date == today ? '今天' : x.day -->
                                 </view>
                             </swiper-item>
@@ -54,7 +54,7 @@
                                     :data-month="x.month" :data-day="x.day" :data-date="x.date" @tap="onDayTap">
                                     <view class="date-grid-child choid-grid-child fc"
                                         :class="x.date >= today ? '':  !isFuture ? '' : 'notCurrent'">
-                                        {{convertStr(x)}}</view>
+                                        {{convertStr}}</view>
                                     <!-- x.date == today ? '今天' : x.day -->
                                 </view>
                             </swiper-item>
