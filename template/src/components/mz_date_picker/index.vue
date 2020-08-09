@@ -1,7 +1,7 @@
 <!--
  * @Author: tim
  * @Date: 2020-07-28 20:17:30
- * @LastEditTime: 2020-08-09 12:05:02
+ * @LastEditTime: 2020-08-09 16:19:56
  * @LastEditors: Please set LastEditors
  * @Description: 日期选择器
  * @FilePath: /mzi-water-oos/src/components/mz_date_picker/index.vue
@@ -34,7 +34,7 @@
                                     :data-month="x.month" :data-day="x.day" :data-date="x.date" @tap="onDayTap">
                                     <view class="date-grid-child choid-grid-child fc "
                                         :class="x.date >= today ? '':  !isFuture ? '' : 'notCurrent'">
-                                        {{x.date == today ? '今天' : x.day}}</view>
+                                        {{convertStr(x)}}</view>
                                 </view>
                             </swiper-item>
                             <swiper-item class="_picker-date-grid">
@@ -44,7 +44,8 @@
                                     :data-month="x.month" :data-day="x.day" :data-date="x.date" @tap="onDayTap">
                                     <view class="date-grid-child choid-grid-child fc "
                                         :class="x.date >= today ? '':  !isFuture ? '' : 'notCurrent'">
-                                        {{x.date == today ? '今天' : x.day}}</view>
+                                        {{convertStr(x)}}</view>
+                                    <!-- x.date == today ? '今天' : x.day -->
                                 </view>
                             </swiper-item>
                             <swiper-item class="_picker-date-grid">
@@ -53,7 +54,8 @@
                                     :data-month="x.month" :data-day="x.day" :data-date="x.date" @tap="onDayTap">
                                     <view class="date-grid-child choid-grid-child fc"
                                         :class="x.date >= today ? '':  !isFuture ? '' : 'notCurrent'">
-                                        {{x.date == today ? '今天' : x.day}}</view>
+                                        {{convertStr(x)}}</view>
+                                    <!-- x.date == today ? '今天' : x.day -->
                                 </view>
                             </swiper-item>
                             <swiper-item class="_picker-date-grid">
@@ -62,7 +64,8 @@
                                     :data-month="x.month" :data-day="x.day" :data-date="x.date" @tap="onDayTap">
                                     <view class="date-grid-child choid-grid-child fc"
                                         :class="x.date >= today ? '':  !isFuture ? '' : 'notCurrent'">
-                                        {{x.date == today ? '今天' : x.day}}</view>
+                                        {{convertStr(x)}}</view>
+                                    <!-- x.date == today ? '今天' : x.day -->
                                 </view>
                             </swiper-item>
                         </swiper>
@@ -197,6 +200,10 @@
             ///动态计算
             getHMonthInfo() {
                 return this.year + '年 ' + this.month + '月'
+            },
+
+            convertStr(x) {
+                return x.date == this.today ? '今天' : x.day;
             }
         },
 
