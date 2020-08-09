@@ -1,6 +1,9 @@
 {
-  "name": "mzi-water-oos",
+  "name": "{{ name }}",
+  "description": "{{ description }}",
   "version": "1.0.0",
+  "author": "{{ author }}",
+  "license": "{{ license }}",
   "private": true,
   "scripts": {
     "serve": "npm run dev:h5",
