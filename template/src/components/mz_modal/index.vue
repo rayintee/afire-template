@@ -1,7 +1,7 @@
 <!--
  * @Author: Tim
  * @Date: 2020-07-20 17:15:44
- * @LastEditTime: 2020-07-27 17:00:45
+ * @LastEditTime: 2020-08-09 18:47:15
  * @LastEditors: Please set LastEditors
  * @Description: modal弹窗自定义
  * @FilePath: /mzi-water-oos/src/components/mz_modal/index.vue
@@ -21,11 +21,11 @@
                     </view>
                     <view class="flex-row tx-modal-btn-row">
                         <view class="flex-1 tx-modal-btn line-right" v-if="isConfirm" @tap.stop="onCancel">
-                            <text class="text" :style="'color: ' + btnCancelColor">{{btnCancelTxt || '取消'}}</text>
+                            <text class="text" :style="'color: ' + btnCancelColor">{{btnCancelTxt}}</text>
                         </view>
                         <view class="flex-1 tx-modal-btn" @tap.stop="onSure">
                             <text class="text txt-high-light"
-                                :style="getBtnConfirmColor">{{btnConfirmTxt || '确定'}}</text>
+                                :style="getBtnConfirmColor">{{btnConfirmTxt}}</text>
                         </view>
                     </view>
                 </view>
