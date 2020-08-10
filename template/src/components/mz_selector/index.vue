@@ -1,7 +1,7 @@
 <!--
  * @Author: Tim
  * @Date: 2020-07-24 11:40:16
- * @LastEditTime: 2020-08-07 16:58:46
+ * @LastEditTime: 2020-08-09 18:50:53
  * @LastEditors: Please set LastEditors
  * @Description: 选择器：下拉选择器
  * @FilePath: /mzi-water-oos/src/components/mz_selector/index.vue
