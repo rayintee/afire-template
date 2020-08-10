@@ -1,7 +1,7 @@
 /*
  * @Author: Tim
  * @Date: 2020-07-16 15:30:40
- * @LastEditTime: 2020-08-07 17:54:17
+ * @LastEditTime: 2020-08-10 10:54:27
  * @LastEditors: Please set LastEditors
  * @Description: 基础业务Http代理封装
  * @FilePath: /mzi-water-oos/src/services/base_service.js
@@ -39,6 +39,8 @@ export default class BaseService extends Services {
                 header: this.header,
                 showToast: this.showToast,
                 showLoading: this.showLoading,
+
+                ///接口参数是否需要序列化
                 serialize: this.serialize
             });
 
